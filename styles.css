@@ -462,10 +462,9 @@ button {
     visibility: hidden;
 }
 
-/* Light mode: hollow outline text so Faleye reads over dark jacket without glow */
+/* Light mode: white text — dark glass plates + portrait provide contrast */
 [data-theme="light"] .text-front .main-title {
-    color: transparent;
-    -webkit-text-stroke: 2px var(--text-primary);
+    color: #ffffff;
 }
 
 .display-theme {
