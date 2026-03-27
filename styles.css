@@ -462,6 +462,15 @@ button {
     visibility: hidden;
 }
 
+/* Light mode: white outline so dark text pops over her dark jacket */
+[data-theme="light"] .text-front .main-title {
+    -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.9);
+    paint-order: stroke fill;
+    text-shadow:
+        0 0 20px rgba(255, 255, 255, 0.7),
+        0 0 40px rgba(255, 255, 255, 0.4);
+}
+
 .display-theme {
     color: var(--text-primary);
 }
