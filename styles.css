@@ -411,7 +411,13 @@ img {
     visibility: hidden;
 }
 
-/* No text glow in light mode — clean contrast only */
+[data-theme="light"] .main-title {
+    -webkit-text-stroke: 1px var(--text-primary);
+    paint-order: stroke fill;
+    text-shadow:
+        0 0 15px rgba(251, 245, 240, 0.8),
+        0 0 30px rgba(251, 245, 240, 0.5);
+}
 
 /* Liquid Glass Orbs */
 .glass-container {
