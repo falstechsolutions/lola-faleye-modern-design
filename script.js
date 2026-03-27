@@ -90,7 +90,7 @@ window.addEventListener('DOMContentLoaded', () => {
     // 5. GSAP ANIMATIONS
     // Pre-lock all animated elements: set visibility visible (overriding CSS hidden)
     // but keep opacity 0 so they're invisible until animated
-    const elementsToHide = ['.header', '.glass-orb', '.portrait-img', '.main-title', '.hero-bottom', '.page-hero', '.about-block', '.project-card']
+    const elementsToHide = ['.header', '.glass-plate', '.portrait-img', '.main-title', '.hero-bottom', '.page-hero', '.about-block', '.project-card']
         .filter(sel => document.querySelector(sel));
 
     if (elementsToHide.length > 0) {
@@ -102,7 +102,7 @@ window.addEventListener('DOMContentLoaded', () => {
     if (document.querySelector('.portrait-img')) gsap.set('.portrait-img', { scale: 1.1, y: 50 });
     if (document.querySelector('.main-title')) gsap.set('.main-title', { y: 100 });
     if (document.querySelector('.hero-bottom')) gsap.set('.hero-bottom', { y: 20 });
-    if (document.querySelector('.glass-orb')) gsap.set('.glass-orb', { scale: 0.8 });
+    if (document.querySelector('.glass-plate')) gsap.set('.glass-plate', { scale: 0.8 });
     if (document.querySelector('.page-hero')) gsap.set('.page-hero', { y: 30 });
     if (document.querySelector('.about-block')) gsap.set('.about-block', { y: 30 });
 
@@ -119,7 +119,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     // Hero page animations
     if (document.querySelector('.hero')) {
-        tl.to('.glass-orb', { opacity: 0.4, scale: 1, duration: 2.5, stagger: 0.4, ease: "power2.out" }, "-=0.5")
+        tl.to('.glass-plate', { opacity: 1, scale: 1, duration: 2.5, stagger: 0.2, ease: "power2.out" }, "-=0.5")
             .to('.portrait-img', { y: 0, scale: 1, opacity: 1, duration: 1.5, ease: "power4.out" }, "-=2")
             .to('.main-title', { y: 0, opacity: 1, duration: 1.2, stagger: 0.2 }, "-=1.2")
             .to('.hero-bottom', { y: 0, opacity: 1, duration: 1 }, "-=0.5");
@@ -132,15 +132,16 @@ window.addEventListener('DOMContentLoaded', () => {
                     const xPos = (e.clientX / window.innerWidth - 0.5) * 20;
                     const yPos = (e.clientY / window.innerHeight - 0.5) * 20;
 
-                    gsap.to('.orb-1', { x: xPos * 2.5, y: yPos * 2.5, duration: 2, ease: "power2.out" });
-                    gsap.to('.orb-2', { x: -xPos * 2, y: -yPos * 2, duration: 2.5, ease: "power2.out" });
+                    gsap.to('.plate-1', { x: xPos * 2.5, y: yPos * 2.5, duration: 2, ease: "power2.out" });
+                    gsap.to('.plate-2', { x: -xPos * 2, y: -yPos * 2, duration: 2.5, ease: "power2.out" });
+                    gsap.to('.plate-3', { x: xPos * 1.5, y: yPos * 1.5, duration: 2.2, ease: "power2.out" });
                     gsap.to('.text-back', { x: xPos * 3, y: yPos * 3, duration: 1 });
                     gsap.to('.text-front', { x: -xPos * 2, y: -yPos * 2, duration: 1 });
                     gsap.to('.portrait-img', { x: -xPos * 1, y: -yPos * 1, duration: 1 });
                 });
 
                 heroContent.addEventListener('mouseleave', () => {
-                    gsap.to(['.orb-1', '.orb-2', '.text-back', '.text-front', '.portrait-img'], {
+                    gsap.to(['.plate-1', '.plate-2', '.plate-3', '.text-back', '.text-front', '.portrait-img'], {
                         x: 0, y: 0, duration: 1.5, ease: "power3.out"
                     });
                 });

@@ -408,15 +408,14 @@ img {
     line-height: 0.8;
     letter-spacing: -0.03em;
     opacity: 0;
+
     visibility: hidden;
 }
 
 [data-theme="light"] .main-title {
-    -webkit-text-stroke: 1px var(--text-primary);
-    paint-order: stroke fill;
-    text-shadow:
-        0 0 15px rgba(251, 245, 240, 0.8),
-        0 0 30px rgba(251, 245, 240, 0.5);
+    color: var(--text-primary);
+    -webkit-text-stroke: 0;
+    text-shadow: none;
 }
 
 /* Liquid Glass Orbs */
@@ -429,6 +428,49 @@ img {
     z-index: 15;
     pointer-events: none;
     overflow: hidden;
+}
+
+.glass-plate {
+    position: absolute;
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.05);
+    will-change: transform;
+    opacity: 0;
+    visibility: hidden;
+}
+
+[data-theme="dark"] .glass-plate {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+}
+
+.plate-1 {
+    width: 35vw;
+    height: 45vw;
+    top: 15%;
+    left: 15%;
+    border-radius: 32px;
+}
+
+.plate-2 {
+    width: 25vw;
+    height: 35vw;
+    top: 10%;
+    right: 20%;
+    border-radius: 24px;
+}
+
+.plate-3 {
+    width: 40vw;
+    height: 25vw;
+    bottom: 25%;
+    left: 25%;
+    border-radius: 24px;
 }
 
 .glass-orb {
