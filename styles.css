@@ -394,10 +394,17 @@ img {
     top: 5%;
 }
 
-.text-front {
+.text-front,
+.text-front-white {
     z-index: 15;
     /* Sits behind the portrait */
     top: 40%;
+}
+
+a,
+button {
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 /* Portrait Positioning */
