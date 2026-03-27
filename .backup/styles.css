@@ -385,6 +385,8 @@ img {
     width: 100%;
     text-align: center;
     pointer-events: none;
+    color: #ffffff;
+    mix-blend-mode: difference;
     will-change: transform;
     transform: translateZ(0);
 }
@@ -395,53 +397,8 @@ img {
 }
 
 .text-front {
-    z-index: 15;
-    /* Sits behind the portrait */
-    top: 40%;
-}
-
-/* Portrait Positioning */
-.portrait-container {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 95vh;
-    display: flex;
-    justify-content: center;
-    z-index: 20;
-    pointer-events: none;
-}
-
-.portrait-img {
-    position: relative;
-    height: 100%;
-    width: auto;
-    object-fit: contain;
-    object-position: bottom center;
-    will-change: transform;
-    -webkit-mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
-    mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
-    transform: translateZ(0);
-}
-
-/* Mask Layer for White Text overlay */
-.portrait-mask-layer {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
     z-index: 30;
-    pointer-events: none;
-    -webkit-mask-image: url('lola-portrait-transparent.png');
-    mask-image: url('lola-portrait-transparent.png');
-    -webkit-mask-size: auto 95vh;
-    mask-size: auto 95vh;
-    -webkit-mask-position: bottom center;
-    mask-position: bottom center;
-    -webkit-mask-repeat: no-repeat;
-    mask-repeat: no-repeat;
+    top: 40%;
 }
 
 .main-title {
@@ -453,14 +410,6 @@ img {
     letter-spacing: -0.03em;
     opacity: 0;
     visibility: hidden;
-}
-
-.display-theme {
-    color: var(--text-primary);
-}
-
-.display-white-mask {
-    color: #ffffff;
 }
 
 /* Liquid Glass Orbs */
