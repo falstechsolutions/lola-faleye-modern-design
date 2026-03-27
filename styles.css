@@ -488,6 +488,8 @@ img {
     backface-visibility: hidden;
     opacity: 0;
     visibility: hidden;
+    -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 95%);
+    mask-image: linear-gradient(to bottom, black 70%, transparent 95%);
 }
 
 /* Hero image swap for themes */
@@ -618,6 +620,8 @@ img {
     border-radius: 12px;
     margin: 0 auto;
     display: block;
+    -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
 }
 
 .about-section {
