@@ -414,8 +414,11 @@ img {
 
 [data-theme="light"] .main-title {
     color: var(--text-primary);
-    -webkit-text-stroke: 0;
-    text-shadow: none;
+    -webkit-text-stroke: 1px var(--text-primary);
+    paint-order: stroke fill;
+    text-shadow:
+        0 0 15px rgba(251, 245, 240, 0.8),
+        0 0 30px rgba(251, 245, 240, 0.5);
 }
 
 /* Liquid Glass Orbs */
