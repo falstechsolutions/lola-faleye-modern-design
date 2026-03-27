@@ -138,12 +138,10 @@ window.addEventListener('DOMContentLoaded', () => {
                     gsap.to('.text-back', { x: xPos * 3, y: yPos * 3, duration: 1 });
                     gsap.to('.text-front', { x: -xPos * 2, y: -yPos * 2, duration: 1 });
                     gsap.to('.portrait-img', { x: -xPos * 1, y: -yPos * 1, duration: 1 });
-                    gsap.to('.portrait-mask-layer', { x: -xPos * 1, y: -yPos * 1, duration: 1 });
-                    gsap.to('.text-front-white', { x: -xPos * 1, y: -yPos * 1, duration: 1 });
                 });
 
                 heroContent.addEventListener('mouseleave', () => {
-                    gsap.to(['.plate-1', '.plate-2', '.plate-3', '.text-back', '.text-front', '.portrait-img', '.portrait-mask-layer', '.text-front-white'], {
+                    gsap.to(['.plate-1', '.plate-2', '.plate-3', '.text-back', '.text-front', '.portrait-img'], {
                         x: 0, y: 0, duration: 1.5, ease: "power3.out"
                     });
                 });

@@ -385,6 +385,7 @@ img {
     width: 100%;
     text-align: center;
     pointer-events: none;
+    color: var(--text-primary);
     will-change: transform;
     transform: translateZ(0);
 }
@@ -394,10 +395,9 @@ img {
     top: 5%;
 }
 
-.text-front,
-.text-front-white {
-    z-index: 15;
-    /* Sits behind the portrait */
+.text-front {
+    z-index: 30;
+    /* IN FRONT of portrait (z-index: 20) */
     top: 40%;
 }
 
